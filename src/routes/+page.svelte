@@ -86,6 +86,7 @@
         </div>
       </div>
     </div>
+    <footer>Mikel Apesteguia - 2023</footer>
   {/if}
   {#if mostrar === true}
     <Cont {userData} {tema} />
@@ -110,6 +111,12 @@
     background-color: rgb(24, 24, 24);
     color: white;
     transition: 0.3s;
+  }
+  footer {
+    opacity: 0.8;
+    position: absolute;
+    top: 90%;
+    margin-left: 100px;
   }
   .slogan > button {
     margin-top: 30px;
