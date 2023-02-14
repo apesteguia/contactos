@@ -12,7 +12,7 @@
   import Cont from "./cont.svelte";
   import { onMount } from "svelte";
 
-  export let tema: boolean;
+  let tema: boolean;
   const toggleDarkTheme = (): void => {
     window.document.body.classList.toggle("dark-mode");
     if (window.document.body.classList.contains("dark-mode")) {
@@ -71,11 +71,10 @@
 </script>
 
 <main>
-  <button on:click={toggleDarkTheme} class="theme-button"
-    >Theme: {mitema}</button
-  >
-
   {#if mostrar === false}
+    <button on:click={toggleDarkTheme} class="theme-button"
+      >Theme: {mitema}</button
+    >
     <div class="app">
       <div class="card">
         <div class="slogan">
@@ -89,7 +88,7 @@
     <footer>Mikel Apesteguia - 2023</footer>
   {/if}
   {#if mostrar === true}
-    <Cont {userData} {tema} />
+    <Cont {userData} />
   {/if}
 </main>
 
